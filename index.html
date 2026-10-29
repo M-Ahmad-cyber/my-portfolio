@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Ahmad | Full Stack Developer & AI Engineer</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            900: '#0c4a6e',
+                        },
+                        darkbg: '#0f172a',
+                        cardbg: '#1e293b',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Font Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+        }
+        .glow-effect {
+            box-shadow: 0 0 20px -5px rgba(56, 189, 248, 0.3);
+        }
+        .glass-nav {
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(51, 65, 85, 0.6);
+        }
+    </style>
+</head>
+<body class="bg-darkbg text-slate-100 selection:bg-brand-500 selection:text-white">
+
+    <!-- Navigation Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-nav transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Brand Logo -->
+                <a href="#hero" class="flex items-center space-x-3 text-xl font-bold tracking-tight text-white group">
+                    <span class="bg-brand-500 text-slate-900 rounded-lg px-2.5 py-1 font-extrabold group-hover:scale-105 transition-transform">MA</span>
+                    <span class="group-hover:text-brand-400 transition-colors">Muhammad Ahmad</span>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                    <a href="#hero" class="text-slate-300 hover:text-brand-400 transition-colors">Home</a>
+                    <a href="#about" class="text-slate-300 hover:text-brand-400 transition-colors">About</a>
+                    <a href="#skills" class="text-slate-300 hover:text-brand-400 transition-colors">Skills</a>
+                    <a href="#projects" class="text-slate-300 hover:text-brand-400 transition-colors">Projects</a>
+                    <a href="#contact" class="px-4 py-2 rounded-full bg-brand-500 hover:bg-brand-600 text-slate-950 font-semibold transition-all hover:shadow-lg hover:shadow-brand-500/20">Contact Me</a>
+                </nav>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" type="button" class="text-slate-300 hover:text-white focus:outline-none p-2 rounded-lg bg-slate-800">
+                        <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div class="hidden md:hidden bg-slate-900 border-b border-slate-800 px-4 pt-2 pb-4 space-y-2" id="mobile-menu">
+            <a href="#hero" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-brand-400 hover:bg-slate-800">Home</a>
+            <a href="#about" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-brand-400 hover:bg-slate-800">About</a>
+            <a href="#skills" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-brand-400 hover:bg-slate-800">Skills</a>
+            <a href="#projects" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-brand-400 hover:bg-slate-800">Projects</a>
+            <a href="#contact" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-brand-400 hover:bg-slate-800">Contact Me</a>
+        </div>
+    </header>
+
+    <main class="pt-16">
+        <!-- Hero Section -->
+        <section id="hero" class="min-h-[90vh] flex items-center relative overflow-hidden py-20">
+            <!-- Glow backdrop decoration -->
+            <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-brand-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
+                <div class="grid md:grid-cols-12 gap-12 items-center">
+                    <div class="md:col-span-7 space-y-6 text-center md:text-left">
+                        <div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-slate-800/80 border border-slate-700 text-brand-400 text-xs font-semibold tracking-wide uppercase">
+                            <span class="w-2 h-2 rounded-full bg-brand-400 animate-pulse"></span>
+                            <span>Available for Opportunities</span>
+                        </div>
+                        <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white">
+                            Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-cyan-200">Muhammad Ahmad</span>
+                        </h1>
+                        <p class="text-xl sm:text-2xl font-semibold text-slate-300">
+                            Full Stack Developer & AI Engineer
+                        </p>
+                        <p class="text-base sm:text-lg text-slate-400 max-w-2xl leading-relaxed">
+                            Specializing in building robust full-stack web applications, deep learning computer vision systems, and automated AI workflows.
+                        </p>
+                        
+                        <!-- CTA Buttons -->
+                        <div class="flex flex-wrap gap-4 justify-center md:justify-start pt-2">
+                            <a href="#projects" class="px-6 py-3 rounded-xl bg-brand-500 hover:bg-brand-600 text-slate-950 font-bold transition-all shadow-lg shadow-brand-500/25 flex items-center space-x-2">
+                                <span>View My Work</span>
+                                <i class="fa-solid fa-arrow-down text-sm"></i>
+                            </a>
+                            <a href="#contact" class="px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold border border-slate-700 transition-all flex items-center space-x-2">
+                                <span>Contact Details</span>
+                                <i class="fa-solid fa-envelope text-sm"></i>
+                            </a>
+                        </div>
+
+                        <!-- Quick Contact Bar -->
+                        <div class="pt-6 flex flex-wrap justify-center md:justify-start items-center gap-6 text-sm text-slate-400">
+                            <a href="mailto:ahmadkhankhosa628@gmail.com" class="flex items-center space-x-2 hover:text-brand-400 transition-colors">
+                                <i class="fa-solid fa-envelope text-brand-400"></i>
+                                <span>ahmadkhankhosa628@gmail.com</span>
+                            </a>
+                            <a href="tel:+923140413219" class="flex items-center space-x-2 hover:text-brand-400 transition-colors">
+                                <i class="fa-solid fa-phone text-brand-400"></i>
+                                <span>+92 314 0413219</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Profile Banner Display -->
+                    <div class="md:col-span-5 flex justify-center">
+                        <div class="relative w-64 h-64 sm:w-80 sm:h-80 rounded-3xl bg-slate-800 border-2 border-slate-700 p-4 shadow-2xl flex flex-col justify-between overflow-hidden group hover:border-brand-500 transition-colors">
+                            <div class="absolute inset-0 bg-gradient-to-br from-brand-500/10 to-transparent pointer-events-none"></div>
+                            
+                            <div class="flex justify-between items-center text-xs font-mono text-slate-400">
+                                <span>DEVELOPER_PROFILE</span>
+                                <span class="flex items-center gap-1.5">
+                                    <span class="w-2 h-2 rounded-full bg-emerald-500"></span> ACTIVE
+                                </span>
+                            </div>
+
+                            <div class="space-y-3 my-auto">
+                                <div class="w-16 h-16 rounded-2xl bg-brand-500/20 text-brand-400 border border-brand-500/30 flex items-center justify-center text-3xl font-bold">
+                                    <i class="fa-solid fa-code"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold text-white">Full Stack & AI</h3>
+                                    <p class="text-xs text-slate-400">Python • Web • Deep Learning</p>
+                                </div>
+                            </div>
+
+                            <div class="pt-3 border-t border-slate-700/80 flex justify-between text-xs font-mono text-slate-400">
+                                <span>PROJECTS: 04+</span>
+                                <span>LOC: PAKISTAN</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Profile Section -->
+        <section id="about" class="py-20 bg-slate-900/50 border-y border-slate-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-xs font-semibold uppercase tracking-widest text-brand-400 mb-2">Professional Summary</h2>
+                    <p class="text-3xl font-bold text-white sm:text-4xl">About Me</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Bio Card -->
+                    <div class="md:col-span-2 bg-cardbg border border-slate-800 rounded-2xl p-6 sm:p-8 space-y-4">
+                        <div class="flex items-center space-x-3 text-brand-400">
+                            <i class="fa-solid fa-user-gear text-2xl"></i>
+                            <h3 class="text-xl font-bold text-white">Profile Overview</h3>
+                        </div>
+                        <p class="text-slate-300 leading-relaxed text-base">
+                            I am a dedicated and passionate Full Stack Developer committed to delivering high-quality results. I ensure timely and effective delivery of projects and tasks, combining modern web architecture with artificial intelligence capabilities.
+                        </p>
+                        <p class="text-slate-300 leading-relaxed text-base">
+                            My core expertise bridges backend/frontend software engineering and specialized Machine Learning domains, including Computer Vision, Image Recognition, and Automated AI Workflows.
+                        </p>
+                    </div>
+
+                    <!-- Personal Details Card -->
+                    <div class="bg-cardbg border border-slate-800 rounded-2xl p-6 sm:p-8 space-y-6">
+                        <div>
+                            <h4 class="text-xs font-semibold uppercase text-slate-400 tracking-wider mb-3">Languages spoken</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 rounded-lg bg-slate-800 border border-slate-700 text-xs font-medium text-slate-200">English</span>
+                                <span class="px-3 py-1 rounded-lg bg-slate-800 border border-slate-700 text-xs font-medium text-slate-200">Urdu</span>
+                                <span class="px-3 py-1 rounded-lg bg-slate-800 border border-slate-700 text-xs font-medium text-slate-200">Saraiki</span>
+                            </div>
+                        </div>
+
+                        <div class="border-t border-slate-800 pt-6">
+                            <h4 class="text-xs font-semibold uppercase text-slate-400 tracking-wider mb-3">Interests & Hobbies</h4>
+                            <div class="grid grid-cols-2 gap-3 text-sm text-slate-300">
+                                <div class="flex items-center space-x-2">
+                                    <i class="fa-solid fa-person-running text-brand-400"></i>
+                                    <span>Running</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <i class="fa-solid fa-camera text-brand-400"></i>
+                                    <span>Photography</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <i class="fa-solid fa-plane text-brand-400"></i>
+                                    <span>Traveling</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <i class="fa-solid fa-seedling text-brand-400"></i>
+                                    <span>Gardening</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Skills Section -->
+        <section id="skills" class="py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-xs font-semibold uppercase tracking-widest text-brand-400 mb-2">Technical Proficiency</h2>
+                    <p class="text-3xl font-bold text-white sm:text-4xl">Skills & Competencies</p>
+                </div>
+
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+                    <!-- Skill Items -->
+                    <div class="bg-cardbg border border-slate-800 rounded-xl p-5 hover:border-brand-500/50 transition-all hover:-translate-y-1 group">
+                        <div class="w-10 h-10 rounded-lg bg-blue-500/10 text-blue-400 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-layer-group text-xl"></i>
+                        </div>
+                        <h3 class="font-bold text-white text-lg">Full Stack</h3>
+                        <p class="text-xs text-slate-400 mt-1">End-to-end web software</p>
+                    </div>
+
+                    <div class="bg-cardbg border border-slate-800 rounded-xl p-5 hover:border-brand-500/50 transition-all hover:-translate-y-1 group">
+                        <div class="w-10 h-10 rounded-lg bg-yellow-500/10 text-yellow-400 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fa-brands fa-python text-xl"></i>
+                        </div>
+                        <h3 class="font-bold text-white text-lg">Python</h3>
+                        <p class="text-xs text-slate-400 mt-1">Core Logic & ML Scripting</p>
+                    </div>
+
+                    <div class="bg-cardbg border border-slate-800 rounded-xl p-5 hover:border-brand-500/50 transition-all hover:-translate-y-1 group">
+                        <div class="w-10 h-10 rounded-lg bg-cyan-500/10 text-cyan-400 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fa-brain text-xl fa-solid"></i>
+                        </div>
+                        <h3 class="font-bold text-white text-lg">Machine Learning</h3>
+                        <p class="text-xs text-slate-400 mt-1">Classification & Regressors</p>
+                    </div>
+
+                    <div class="bg-cardbg border border-slate-800 rounded-xl p-5 hover:border-brand-500/50 transition-all hover:-translate-y-1 group">
+                        <div class="w-10 h-10 rounded-lg bg-purple-500/10 text-purple-400 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fa-network-wired text-xl fa-solid"></i>
+                        </div>
+                        <h3 class="font-bold text-white text-lg">Deep Learning & ANN</h3>
+                        <p class="text-xs text-slate-400 mt-1">Neural Networks & CNNs</p>
+                    </div>
+
+                    <div class="bg-cardbg border border-slate-800 rounded-xl p-5 hover:border-brand-500/50 transition-all hover:-translate-y-1 group">
+                        <div class="w-10 h-10 rounded-lg bg-orange-500/10 text-orange-400 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fa-brands fa-html5 text-xl"></i>
+                        </div>
+                        <h3 class="font-bold text-white text-lg">HTML / Web</h3>
+                        <p class="text-xs text-slate-400 mt-1">Frontend UI Markup</p>
+                    </div>
+
+                    <div class="bg-cardbg border border-slate-800 rounded-xl p-5 hover:border-brand-500/50 transition-all hover:-translate-y-1 group">
+                        <div class="w-10 h-10 rounded-lg bg-indigo-500/10 text-indigo-400 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-code text-xl"></i>
+                        </div>
+                        <h3 class="font-bold text-white text-lg">C++</h3>
+                        <p class="text-xs text-slate-400 mt-1">Object-Oriented Coding</p>
+                    </div>
+
+                    <div class="bg-cardbg border border-slate-800 rounded-xl p-5 hover:border-brand-500/50 transition-all hover:-translate-y-1 group">
+                        <div class="w-10 h-10 rounded-lg bg-red-500/10 text-red-400 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fa-brands fa-youtube text-xl"></i>
+                        </div>
+                        <h3 class="font-bold text-white text-lg">YouTube Automation</h3>
+                        <p class="text-xs text-slate-400 mt-1">AI Video & Script Pipelines</p>
+                    </div>
+
+                    <div class="bg-cardbg border border-slate-800 rounded-xl p-5 hover:border-brand-500/50 transition-all hover:-translate-y-1 group">
+                        <div class="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-eye text-xl"></i>
+                        </div>
+                        <h3 class="font-bold text-white text-lg">Computer Vision</h3>
+                        <p class="text-xs text-slate-400 mt-1">OpenCV & Image AI</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Projects Section -->
+        <section id="projects" class="py-20 bg-slate-900/50 border-t border-slate-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="text-xs font-semibold uppercase tracking-widest text-brand-400 mb-2">Portfolio Showcase</h2>
+                    <p class="text-3xl font-bold text-white sm:text-4xl">Featured AI & Web Projects</p>
+                </div>
+
+                <!-- Projects Grid -->
+                <div class="grid md:grid-cols-2 gap-8">
+                    
+                    <!-- Project 1 -->
+                    <div class="bg-cardbg border border-slate-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-slate-700 transition-all group">
+                        <div>
+                            <div class="flex justify-between items-start mb-4">
+                                <span class="text-xs font-mono px-3 py-1 rounded-full bg-brand-500/10 text-brand-400 border border-brand-500/20">Computer Vision</span>
+                                <i class="fa-solid fa-cloud-sun text-2xl text-slate-600 group-hover:text-brand-400 transition-colors"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-brand-400 transition-colors">Micro-Climate Detector</h3>
+                            <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                                Image-based trained AI model designed to detect visual atmospheric conditions including Temperature, Humidity, Coldness, and Hotness based on visual input frames.
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-800">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2.5 py-1 rounded-md bg-slate-800 text-xs text-slate-300">Deep Learning</span>
+                                <span class="px-2.5 py-1 rounded-md bg-slate-800 text-xs text-slate-300">CNN</span>
+                                <span class="px-2.5 py-1 rounded-md bg-slate-800 text-xs text-slate-300">Python</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="bg-cardbg border border-slate-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-slate-700 transition-all group">
+                        <div>
+                            <div class="flex justify-between items-start mb-4">
+                                <span class="text-xs font-mono px-3 py-1 rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/20">Deep Learning</span>
+                                <i class="fa-solid fa-face-smile text-2xl text-slate-600 group-hover:text-purple-400 transition-colors"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">Facial Expression Recognition</h3>
+                            <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                                Real-time camera and image-based artificial neural model capable of recognizing and classifying complex human emotions and facial expressions.
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-800">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2.5 py-1 rounded-md bg-slate-800 text-xs text-slate-300">ANN</span>
+                                <span class="px-2.5 py-1 rounded-md bg-slate-800 text-xs text-slate-300">OpenCV</span>
+                                <span class="px-2.5 py-1 rounded-md bg-slate-800 text-xs text-slate-300">Python</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="bg-cardbg border border-slate-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-slate-700 transition-all group">
+                        <div>
+                            <div class="flex justify-between items-start mb-4">
+                                <span class="text-xs font-mono px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Machine Learning</span>
+                                <i class="fa-solid fa-newspaper text-2xl text-slate-600 group-hover:text-emerald-400 transition-colors"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-emerald-400 transition-colors">Fake News Detector</h3>
+                            <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                                Hybrid classification system trained on dataset CSV files and text/image inputs to detect and verify authentic vs fake news items with high precision.
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-800">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2.5 py-1 rounded-md bg-slate-800 text-xs text-slate-300">NLP</span>
+                                <span class="px-2.5 py-1 rounded-md bg-slate-800 text-xs text-slate-300">Data Analysis</span>
+                                <span class="px-2.5 py-1 rounded-md bg-slate-800 text-xs text-slate-300">Python</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="bg-cardbg border border-slate-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-slate-700 transition-all group">
+                        <div>
+                            <div class="flex justify-between items-start mb-4">
+                                <span class="text-xs font-mono px-3 py-1 rounded-full bg-red-500/10 text-red-400 border border-red-500/20">Automation</span>
+                                <i class="fa-solid fa-robot text-2xl text-slate-600 group-hover:text-red-400 transition-colors"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-red-400 transition-colors">YouTube Automation & Content AI</h3>
+                            <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                                End-to-end automated system leveraging custom Python scripts and AI tool integrations to streamline video content creation, metadata generation, and publishing workflows.
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-800">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2.5 py-1 rounded-md bg-slate-800 text-xs text-slate-300">Python Scripts</span>
+                                <span class="px-2.5 py-1 rounded-md bg-slate-800 text-xs text-slate-300">AI Workflows</span>
+                                <span class="px-2.5 py-1 rounded-md bg-slate-800 text-xs text-slate-300">Content API</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 border-t border-slate-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-4xl mx-auto bg-cardbg border border-slate-800 rounded-3xl p-8 sm:p-12">
+                    <div class="text-center mb-10">
+                        <h2 class="text-xs font-semibold uppercase tracking-widest text-brand-400 mb-2">Get In Touch</h2>
+                        <p class="text-3xl font-bold text-white">Let's Work Together</p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center text-brand-400 shrink-0">
+                                    <i class="fa-solid fa-envelope text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xs uppercase text-slate-400 font-semibold tracking-wider">Email Address</h4>
+                                    <a href="mailto:ahmadkhankhosa628@gmail.com" class="text-lg font-bold text-white hover:text-brand-400 transition-colors">ahmadkhankhosa628@gmail.com</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center text-brand-400 shrink-0">
+                                    <i class="fa-solid fa-phone text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xs uppercase text-slate-400 font-semibold tracking-wider">Phone / WhatsApp</h4>
+                                    <a href="tel:+923140413219" class="text-lg font-bold text-white hover:text-brand-400 transition-colors">+92 314 0413219</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center text-brand-400 shrink-0">
+                                    <i class="fa-solid fa-location-dot text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xs uppercase text-slate-400 font-semibold tracking-wider">Location</h4>
+                                    <p class="text-lg font-bold text-white">Pakistan</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Interactive Copy/Message Action Card -->
+                        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 text-center space-y-4">
+                            <i class="fa-solid fa-paper-plane text-4xl text-brand-400"></i>
+                            <h4 class="text-lg font-bold text-white">Send Direct Email</h4>
+                            <p class="text-xs text-slate-400">Click below to send an email using your default mail app or copy details.</p>
+                            
+                            <div class="pt-2 space-y-2">
+                                <a href="mailto:ahmadkhankhosa628@gmail.com" class="w-full py-3 px-4 rounded-xl bg-brand-500 hover:bg-brand-600 text-slate-950 font-bold block transition-all shadow-md">
+                                    Compose Email
+                                </a>
+                                <button onclick="copyEmail()" class="w-full py-2.5 px-4 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-semibold text-xs border border-slate-700 block transition-all" id="copy-btn">
+                                    <i class="fa-solid fa-copy mr-1"></i> Copy Email Address
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-slate-950 border-t border-slate-900 text-center text-xs text-slate-500">
+        <div class="max-w-7xl mx-auto px-4">
+            <p>© <span id="year"></span> Muhammad Ahmad. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Simple JavaScript for Interactive Elements -->
+    <script>
+        // Set current year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Copy Email Function
+        function copyEmail() {
+            const email = "ahmadkhankhosa628@gmail.com";
+            const btn = document.getElementById('copy-btn');
+            
+            const tempInput = document.createElement("input");
+            tempInput.value = email;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+
+            btn.innerHTML = '<i class="fa-solid fa-check mr-1 text-emerald-400"></i> Copied to Clipboard!';
+            setTimeout(() => {
+                btn.innerHTML = '<i class="fa-solid fa-copy mr-1"></i> Copy Email Address';
+            }, 2500);
+        }
+    </script>
+</body>
+</html>
